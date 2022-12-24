@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"
+  />    <title>海绵宝宝</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <style id="demo2"></style>
+    <div id="buttons">
+        <button id="btnPause">暂停</button>
+        <button id="btnPlay">播放</button>
+        <button id="btnSlow">慢速</button>
+        <button id="btnNormal">中速</button>
+        <button id="btnFast">快速</button>
+    </div>
+    <style>
+        @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    33% {
+      transform: rotate(5deg);
+    }
+    66% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .nose:hover {
+    transform-origin: center bottom;
+    animation: wave 300ms infinite linear;
+  }
+  @keyframes bubbling {
+    0% {
+      transform: rotate(0deg);
+    }
+    33% {
+      transform: rotate(40deg);
+    }
+    66% {
+      transform: rotate(-40deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .hole:hover {
+    transform-origin: center;
+    animation: bubbling 300ms infinite linear;
+  }
+  @keyframes sway {
+    0% {
+      transform: rotate(0deg);
+    }
+    33% {
+      transform: rotate(30deg);
+    }
+    66% {
+      transform: rotate(-30deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .mouth .tooth:hover {
+    transform-origin: center top;
+    animation: sway 300ms infinite linear;
+  }
+  *{box-sizing: border-box;}
+  *::before,*::after{box-sizing: border-box;}
+        #buttons{
+        position: fixed;
+        z-index: 10;
+        right: 0;
+        top: 0;
+        margin-top: 10px;
+        margin-right: 10px;
+        display: flex;
+        flex-direction: column;
+        }
+        #buttons>button{
+        margin-bottom: 10px;
+        padding: 4px 8px;
+        }
+        #demo2{
+            display: none;
+        }
+        #demo{
+        position: fixed;
+        height: 50vh;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border: 1px solid red;
+        overflow-y: auto;
+        }
+        #demo::-webkit-scrollbar{
+        display: none;
+        }
+        #html{
+            position: fixed;
+            bottom: 100px;
+            left: 0;
+            width: 100%;
+            height: 50vh;
+        }
+    </style>
+    <div id="html">
+        <div class="skin">
+            <div id="left-eye" class="eye">
+              <div id="eyelash1" class="eyelash"></div>
+              <div id="eyelash2" class="eyelash"></div>
+              <div id="eyelash3" class="eyelash"></div>
+                <div class="olho1"></div>
+                <div class="olho2"></div>
+            </div>
+            <div id="right-eye" class="eye">
+              <div id="eyelash4" class="eyelash"></div>
+              <div id="eyelash5" class="eyelash"></div>
+              <div id="eyelash6" class="eyelash"></div>
+              <div class="olho1"></div>
+             <div class="olho2"></div>
+            </div>
+            <div class="nose">
+              <div class="nose1"></div>
+            </div>
+            <div class="mouth">
+              <div class="mouth1"></div>
+              <div id="tooth1" class="tooth"></div>
+              <div id="tooth2" class="tooth"></div>
+            </div>
+          </div>
+        <div id="hole-1" class="hole"></div>
+        <div id="hole-2" class="hole"></div>
+        <div id="hole-3" class="hole"></div>
+        <div id="hole-4" class="hole"></div>
+        <div id="hole-5" class="hole"></div>
+        <div id="hole-6" class="hole"></div>
+        <div id="hole-7" class="hole"></div>
+        <div id="hole-8" class="hole"></div>
+      </div>
+    </div>
+    <script src="./test.js"></script>
+  </body>
+</html>
